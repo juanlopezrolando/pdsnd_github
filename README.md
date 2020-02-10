@@ -1,15 +1,25 @@
 ### Date created
-Include the date you created this project and README file.
+This *project* was created on February 7th, 2020.
+This *README file* was created on February 10th, 2020.
 
 ### Project Title
-Replace the Project Title
+*Programming for Data Science Nanodegree Project 2: Explore US Bikeshare Data with Python.*
 
 ### Description
-Describe what your project is about and what it does
+This is a python script that lets users explore various metrics about bikesharing programs in three US cities.
+
+It asks the user for input on the city they want to explore, the month they want to filter by and the day of the week they are interested in.
+
+The script takes these inputs as filters and outputs a series of key figures about the bikesharing program in that city, month and day.
+
+It then asks the user if they'd want the script to display 5 rows of raw data, and it keeps doing so as long as the user keeps typing yes.
+
+Finally it asks the user if they'd like to restart the script and, if not, the script ends.
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+No repos or blogposts were consulted. All credits go to Udacity, their template for the project, and their materials.
