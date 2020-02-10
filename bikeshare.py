@@ -15,10 +15,9 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('\nHello! Let\'s explore some US bikeshare data!')
 
     cities = {'chicago', 'new york city', 'washington'}
-    city = input("\nWhat city do you want to learn about (Chicago, New York City or Washington)? ").lower()
+    city = input("\nHello! Let\'s explore some US bikeshare data!\n\nWhat city do you want to learn about (Chicago, New York City or Washington)? ").lower()
     while city not in cities:
         city = input("\nIt looks like your answer is not in our list. Please type Chicago, New York City or Washington: ").lower()
 
@@ -166,20 +165,23 @@ def main():
         end_count = 5
         while True:
             raw_data = input('\nDo you want to see the first five rows of the raw data?\n\nEnter yes or no.\n\n')
-            print(df.iloc[start_count:end_count])
             start_count += 5
             end_count += 5
+            if raw_data == 'yes':
+                print(df.iloc[start_count:end_count])
+            else:
+                break
             if start_count > 4:
+                while True:
+                    raw_data = input('\nDo you want to see five additional rows of the raw data?\n\nEnter yes or no.\n\n')
+                    start_count += 5
+                    end_count += 5
+                    if raw_data == 'yes':
+                        print(df.iloc[start_count:end_count])
+                    else:
+                        break
                 break
-            if raw_data != 'yes':
-                break
-        while True:
-            raw_data = input('\nDo you want to see five additional rows of the raw data?\n\nEnter yes or no.\n\n')
-            print(df.iloc[start_count:end_count])
-            start_count += 5
-            end_count += 5
-            if raw_data != 'yes':
-                break
+
         restart = input('\nWould you like to start over?\n\nEnter yes or no.\n\n')
         if restart.lower() != 'yes':
             break
