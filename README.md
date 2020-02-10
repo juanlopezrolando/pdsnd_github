@@ -12,6 +12,8 @@ It asks the user for input on the **city** they want to explore, the **month** t
 
 The script takes these inputs as **filters** and outputs a series of key figures about the bikesharing program in that city, month and day.
 
+The featured figures are: most popular month, day and hour to travel, most common start station, end station and trip, total time traveled and average trip duration, breakdown of user type, breakdown of gender, and earliest, most recent and most common year of birth.
+
 It then asks the user if they'd want the script to display 5 rows of **raw data**, and it keeps doing so as long as the user keeps typing yes.
 
 Finally it asks the user if they'd like to **restart** the script and, if not, the script ends.
