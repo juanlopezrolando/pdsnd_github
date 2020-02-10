@@ -22,4 +22,4 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-No repos or blogposts were consulted. All credits go to **Udacity**, their template for the project, and their materials.
+All credits go to **Udacity**, their template for the project, and their materials.
