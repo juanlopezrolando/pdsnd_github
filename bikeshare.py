@@ -15,10 +15,9 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('\nHello! Let\'s explore some US bikeshare data!')
 
     cities = {'chicago', 'new york city', 'washington'}
-    city = input("\nWhat city do you want to learn about (Chicago, New York City or Washington)? ").lower()
+    city = input("\nHello! Let\'s explore some US bikeshare data!\n\nWhat city do you want to learn about (Chicago, New York City or Washington)? ").lower()
     while city not in cities:
         city = input("\nIt looks like your answer is not in our list. Please type Chicago, New York City or Washington: ").lower()
 
