@@ -166,20 +166,23 @@ def main():
         end_count = 5
         while True:
             raw_data = input('\nDo you want to see the first five rows of the raw data?\n\nEnter yes or no.\n\n')
-            print(df.iloc[start_count:end_count])
             start_count += 5
             end_count += 5
+            if raw_data == 'yes':
+                print(df.iloc[start_count:end_count])
+            else:
+                break
             if start_count > 4:
+                while True:
+                    raw_data = input('\nDo you want to see five additional rows of the raw data?\n\nEnter yes or no.\n\n')
+                    start_count += 5
+                    end_count += 5
+                    if raw_data == 'yes':
+                        print(df.iloc[start_count:end_count])
+                    else:
+                        break
                 break
-            if raw_data != 'yes':
-                break
-        while True:
-            raw_data = input('\nDo you want to see five additional rows of the raw data?\n\nEnter yes or no.\n\n')
-            print(df.iloc[start_count:end_count])
-            start_count += 5
-            end_count += 5
-            if raw_data != 'yes':
-                break
+
         restart = input('\nWould you like to start over?\n\nEnter yes or no.\n\n')
         if restart.lower() != 'yes':
             break
